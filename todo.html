@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Akronim&family=Alex+Brush&family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>to do </title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Pacifico",Alex Brush,'Times New Roman', Times, serif;
+            margin: 20px 35px;
+            font-size: 20px;
+            padding:10px ;
+        }
+        .mainpart{
+            background-image: url("https://cdn.shopify.com/s/files/1/0322/9623/9242/products/pastel-digital-printed-tussar-silk-floral-design-fabric-1-mtr-895460.jpg?v=1673250003");
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* background-color: rgb(177, 196, 188); */
+            padding: 5px 20px 15px 20px;
+            border: 2px solid black;
+            border-radius: 6px;
+            
+        }
+        input[type="text"]{
+            width: 95%;
+            border: 1px solid black;
+            border-radius: 4%;
+
+        }
+        
+        .submit{
+            height: 50px;
+            position: relative;
+            border-radius: 1%;
+            /* margin: 0;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); */
+        }
+        .center{
+            margin: 0;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        input[type="submit"]{
+            width: 120%;
+            font-size: 80%;
+            background-color: rgba(0, 0, 255, 0.534);
+        }
+        textarea{
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 2%;
+        }
+        .note{
+            height: 50px;
+            width: 100%;
+        }
+        .day{
+            width: 20%;
+            font-size:120%;
+
+        }
+        .date{
+            font-size: 180%;
+        }
+        fieldset{
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 1%;
+        }
+        .gridcontainer{
+            display: grid;
+            height: 80%;
+            column-gap: 20px;
+            grid-template-columns: 3fr 1fr;
+            
+        }
+        .griditem1{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .griditem2{
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+    </style>
+</head>
+<body>
+    <form class="mainpart" action="">
+        <h1>TO DO LIST </h1>
+        <hr >
+        <p class="date">Date <input type="date"></p>
+        <p class="day">Day <input type="text"></p>
+        <div class="gridcontainer">
+            <div class="griditem1">
+                <fieldset>
+                    <legend>Things to do </legend>
+                    <input type="text" placeholder="read a book" ><input type="radio" ><br>
+                    <input type="text" placeholder="do maths"><input type="radio"><br>
+                    <input type="text" placeholder="etc"><input type="radio"><br>
+                    <input type="text"><input type="radio"><br>
+                    <input type="text"><input type="radio"><br>
+                    <input type="text"><input type="radio"><br>
+                    <input type="text"><input type="radio"><br>
+                    <input type="text"><input type="radio"><br>
+                    <input type="text"><input type="radio"><br>
+                    <input type="text"><input type="radio"><br>
+                </fieldset>
+
+            </div>
+            <div class="griditem2">
+                <p>Don't forget<br>
+                    <textarea cols="15" rows="10" placeholder="important meeting"></textarea></p>
+            </div>
+        </div>
+        
+         
+        
+        <p>How do you feel today?<br>
+        <textarea class="note" cols="30" rows="10" placeholder="sleepy"></textarea></p>
+        
+        
+        <p>Note<br> <textarea class="note" name="Note" id="" cols="30" rows="10"placeholder="do exerxise"></textarea></p>
+        <div class="submit"> 
+            <div class="center">
+                <input type="submit" value="Save">  <br><input type="submit" value="New Day">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
