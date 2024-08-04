@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to do list</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function submitForm(){
+            document.getElementById('checkboxForm').submit();
+        }
+    </script>
 </head>
 <body>
 
@@ -13,12 +18,14 @@
     </div>
     
     <div class="box">
-        <% for (var i = 0; i<newListItems.length ; i++){ %>
-            <div class="item">
-                <input type="checkbox">
-                <p> <%= newListItems[i] %></p>
-            </div>
-        <% } %>
+        <form id="checkboxForm" action="/update" method="post">
+            <% for (var i = 0; i<newListItems.length ; i++){ %>
+                <div class="item">
+                    <input type="checkbox" name="isChecked" value="<%= newListItems[i]._id %>" <%= newListItems[i].isChecked ? 'checked': '' %> onchange="submitForm()" >
+                    <p> <%= newListItems[i].item %></p>
+                </div>
+            <% } %>
+        </form>
 
         <form class="item" action="/" method="post">
             <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
